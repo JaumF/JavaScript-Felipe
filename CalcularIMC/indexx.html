@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        h1{
+            background-color: rgb(216, 238, 238);
+            height: 100px;
+            font-size: 2em;
+        }
+        p{
+            background-color: rgb(216, 238, 238);
+            height: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #caixa{
+            background-color: rgb(243, 4, 163);
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Iniciando em JavaScript
+    </h1>
+    <p id="par1">
+        Hoje, dia 16 de agosto de 2025, estamos no Instituto Federal Baiano.
+    </p>
+    <div id="caixa">
+
+    </div>
+
+    <button type="button" onclick="minhaFuncao()"> Aplicar </button>
+    <button type="button" onclick="minhaCaixa()"> Mudar Cor </button>
+    <script>
+        function minhaCaixa(){
+            let caixa = document.getElementById("caixa");
+
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+
+            let corRGB = `rgb(${r}, ${g}, ${b})`;
+
+            caixa.style.backgroundColor = corRGB;
+
+            console.log(`Cor RGB: ${corRGB}`);
+        }
+        function minhaFuncao(){
+            document.getElementById("par1").style.backgroundColor = "yellow"
+        }
+        let frase = "Hoje é Sexta!"
+        document.getElementById("par1").innerHTML = frase;
+        
+    </script>
+</body>
+</html>
