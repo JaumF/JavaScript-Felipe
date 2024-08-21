@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Resultado do IMC</title>
+</head>
+<body>
+    <h1>Resultado do IMC</h1>
+    <div id="resultado"></div>
+    <a href="index.html">Voltar</a>
+    <script>
+        // Obtém o parâmetro da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const imc = urlParams.get('imc');
+        
+        // Mostra o resultado na página
+        document.getElementById('resultado').textContent = `Seu IMC é ${imc}`;
+    </script>
+</body>
+</html>
